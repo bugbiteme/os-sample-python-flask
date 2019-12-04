@@ -1,0 +1,12 @@
+[Unit]
+Description=Python Web-App Launch Service 
+After=multi-user.target
+[email protected]
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/azureuser/os-sample-python-flask/wsgi.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
